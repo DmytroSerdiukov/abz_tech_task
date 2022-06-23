@@ -1,0 +1,32 @@
+@use '../../styles/typography';
+@use '../../styles/colors';
+
+.register__container {
+    width: 1024px;
+    margin: auto;
+    background-color: colors.$BACKGROUND_COLOR;
+}
+
+.container__header {
+    padding-top: 140px;
+    margin-bottom: 50px;
+}
+
+.header__h1 {
+    text-align: center;
+}
+
+.register__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    margin: auto;
+}
+
+.register__button {
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+}
