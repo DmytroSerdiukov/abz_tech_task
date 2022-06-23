@@ -1,0 +1,72 @@
+.header {
+    width: 1024px;
+    margin: auto;
+    background-color: white;
+
+
+}
+
+.container {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin: auto;
+
+}
+
+.container_buttons {
+    width: 210px;
+    margin-right: 60px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Nunito', sans-serif;
+}
+
+.logo {
+    margin-left: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        width: 1024px;
+        background-color: red;
+    }
+    .container {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .logo {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        width: 768px;
+        background-color: yellow;
+    }
+    .container {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .logo {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header {
+        width: 360px;
+        background-color: orange;
+    }
+    .container {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .logo {
+        margin-left: 10px;
+    }
+}
