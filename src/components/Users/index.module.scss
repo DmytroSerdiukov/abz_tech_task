@@ -1,0 +1,39 @@
+@use '../../styles/typography';
+@use '../../styles/colors';
+
+.users__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: colors.$BACKGROUND_COLOR;
+    width: 1024px;
+    margin: auto;
+}
+
+.users__header {
+    margin: 140px 0px 50px 0px;
+}
+
+.header__title {
+
+    // font-size: 2.5rem;
+    // line-height: 2.5rem;
+    // text-align: center;
+    // font-weight: 400;
+    
+}
+
+.users__body {
+    width: 704px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 29px;
+    row-gap: 29px;
+    margin: 0 auto;
+    background-color: colors.$BACKGROUND_COLOR;
+}
+
+.users__button {
+    margin-top: 54px;
+}
