@@ -1,0 +1,21 @@
+%heading {
+    font-family: 'Nunito';
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+}
+
+%body {
+    font-family: 'Nunito';
+    font-size: 1rem;
+    line-height: 1.625px;
+    font-weight: 400;
+}
+
+h1 {
+    @extend %heading
+}
+
+p {
+    @extend %body;
+}
