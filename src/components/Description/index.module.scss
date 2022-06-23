@@ -1,0 +1,39 @@
+@use '../../styles/typography';
+
+// @import '../../styles/typography';
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1024px;
+    height: 650px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+     url(../../images/pexels-alexandr-podvalny-1227513.jpeg);
+    background-size: 100%;
+    margin: auto;
+}
+
+.description__header {
+    margin-top: 164px;
+    color: white;
+    width: 380px;
+    height: 80px;
+    text-align: center;
+
+}
+
+.description__content {
+    margin-top: 21px;
+    color: white;
+    width: 380px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+.description__button {
+    margin-top: 32px;
+}
