@@ -1,0 +1,68 @@
+@use '../../styles/typography';
+@use '../../styles/media';
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1024px;
+    height: 650px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+     url(../../images/pexels-alexandr-podvalny-1227513.jpeg);
+    background-size: 100%;
+    margin: auto;
+}
+
+.description__header {
+    margin-top: 164px;
+    color: white;
+    width: 380px;
+    height: 80px;
+    text-align: center;
+}
+
+.description__content {
+    margin-top: 21px;
+    color: white;
+    width: 380px;
+    text-align: center;
+}
+
+.description__button {
+    margin-top: 32px;
+}
+
+@media screen and (max-width: media.$LAPTOP) {
+    .description {
+        width: 1024px;
+    }
+}
+
+@media screen and (max-width: media.$TABLET) {
+    .description {
+        width: 768px;
+        height: 500px;
+    }
+
+    .description__header {
+        margin-top: 89px;
+    }
+}
+
+@media screen and (max-width: media.$MOBILE_M) {
+    .description {
+        width: 360px;
+        height: 500px;
+        background-size: cover;
+    }
+
+    .description__header {
+        width: 328px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .description__content {
+        width: 328px;
+    }
+}
