@@ -1,6 +1,7 @@
 .header {
     width: 1024px;
     margin: auto;
+    // padding-top: 3px;
     background-color: white;
 
 
@@ -19,6 +20,7 @@
 
 .container_buttons {
     width: 210px;
+    margin-top: 2px;
     margin-right: 60px;
     display: flex;
     justify-content: space-between;
@@ -26,6 +28,7 @@
 }
 
 .logo {
+    margin-top: 5px;
     margin-left: 60px;
 }
 
