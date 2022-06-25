@@ -9,7 +9,7 @@
 
 .container__header {
     padding-top: 140px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .header__h1 {
@@ -23,6 +23,12 @@
     align-items: center;
     width: 380px;
     margin: auto;
+}
+
+.register__radio{
+    display: 'flex';
+    justify-content: flex-start;
+
 }
 
 .register__button {

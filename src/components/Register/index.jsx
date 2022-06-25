@@ -3,7 +3,7 @@ import React from "react";
 import Buttons from "../../custom/Button";
 import Input from "../../material/Input";
 import RadioButton from "../../material/RadioButton";
-import FileUploader from '../../custom/FileUploader'
+import FileUploader from "../../custom/FileUploader";
 
 import styles from "./index.module.scss";
 
@@ -17,12 +17,12 @@ const Register = () => {
         <Input label="Your Name" />
         <Input label="Email" />
         <Input label="Phone" />
-        <RadioButton />
+        <div className={styles.register__radio}>
+          <RadioButton />
+        </div>
 
+        <FileUploader />
 
-<FileUploader />
-        
-        
         <div className={styles.register__button}>
           <Buttons text={"Sign up"} disabled />
         </div>
