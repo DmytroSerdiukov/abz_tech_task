@@ -1,0 +1,179 @@
+@use '../../styles/typography';
+@use '../../styles/media';
+
+$CARD_WIDTH: 282px;
+$CARD_HEIGHT: 254px;
+
+
+.card__container {
+    width: 282px;
+    height: 254px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: "none";
+    font-family: 'Nunito';
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+}
+
+.card__avatar {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    // margin: "auto";
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.card__tooltip {
+    width: 276px;
+    height: 32px;
+    // position: relative;
+    display: none;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    z-index: 100;
+    opacity: 1;
+}
+
+.card__title {
+    // width: 304px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    @extend %body;
+    // padding-bottom: 0px;
+    // font-family: 'Nunito';
+    // font-size: 1rem;
+    // line-height: 1.625rem;
+    // font-weight: 400;
+    color: black;
+    margin-bottom: 19px;
+    text-align: 'center';
+    overflow-x: hidden;
+    overflow-y: hidden;
+    &:hover {
+        .card__tooltip {
+            display: block;
+            position: absolute;
+        }
+    }
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    font-family: 'Nunito';
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+    overflow-x: visible;
+    color: black;
+    padding: 0px;
+    z-index: 0;
+    // overflow-x: hidden;
+    // overflow-y: hidden;
+    // text-align: 'left';
+
+    // &.content__jobTitle {
+    //     // display: flex;
+    //     // flex-direction: row;
+    //     // flex-wrap: nowrap;
+    //     overflow-x: hidden;
+    //     overflow-y: hidden;
+    // }
+    // &.content__email {
+    //     overflow-x: hidden;
+    //     overflow-y: hidden;
+    // }
+    // &.content__phone {
+    //     overflow-x: hidden;
+    //     overflow-y: hidden;
+    // }
+
+}
+
+.content__jobTitle {
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: nowrap;
+    overflow-x: visible;
+    z-index: 0;
+    // position: relative;
+    // overflow-y: hidden;
+    &:hover {
+        .card__tooltip {
+            display: block;
+            position: absolute;
+        }
+    }
+}
+
+.content__email {
+    overflow-x: hidden;
+    // overflow-y: hidden;
+    z-index: 0;
+    &:hover {
+        .card__tooltip {
+
+            display: block;
+            position: absolute;
+        }
+    }
+}
+.content__phone {
+    z-index: 0;
+    // overflow-x: hidden;
+    // overflow-y: hidden;
+    &:hover {
+        .card__tooltip {
+            display: block;
+            position: absolute;
+            z-index: 1;
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: media.$LAPTOP) {
+    .card__container {
+        width: $CARD_WIDTH;
+        height: $CARD_HEIGHT;
+    }
+}
+
+@media screen and (max-width: media.$TABLET) {
+    .card__container {
+        width: 344px;
+        height: $CARD_HEIGHT;
+    }
+    
+}
+
+@media screen and (max-width: media.$MOBILE_M) {
+    .card__container {
+        width: 328px;
+        height: $CARD_HEIGHT;
+    }
+
+    .card__title {
+        margin-top: 0px;
+    }
+}
