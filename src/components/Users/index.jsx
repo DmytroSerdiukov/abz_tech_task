@@ -1,17 +1,18 @@
 import React from "react";
 
-import UserCard from "../../material/Card";
+import UserCard from "../../custom/Card";
 import Button from "../../custom/Button";
 
 import styles from "./index.module.scss";
 
+
 const users = [
   {
-    title: "Salvador Stewart Flynn Thomas...",
+    title: "Salvador Stewart Flynn Thomas Salva...",
     content: {
-      jobTitle: 'Frontend Developer Frontend ...',
-      email: 'frontend_develop@gmail.com',
-      phone: '+38 (098) 278 44 24'
+      jobTitle: 'Leading specialist of the department of c...',
+      email: 'JeromeKlarkaJeromeKlarka1923362362...',
+      phone: '+38 (098) 278 76 24'
     }
   },
   {

@@ -7,7 +7,7 @@ export default function Input({label = 'Value'}) {
     <Box
       component="form"
       sx={{
-        "& .MuiTextField-root": { m: 1, width: "25ch" },
+        "& .MuiTextField-root": { fontSize: '1rem', marginBottom: '50px', width: "380px" },
       }}
       noValidate
       autoComplete="off"
