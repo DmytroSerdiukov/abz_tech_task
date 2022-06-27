@@ -17,15 +17,16 @@ const Radio = ({ name, value }) => {
   );
 };
 
-const RadioButton = () => {
+const RadioButton = ({positions}) => {
   return (
     <form className={styles.radio__form}>
       <p className={styles.form__header}>Select your position</p>
       <div className={styles.radio__list}>
-        <Radio name="Front-Developer" value="10" />
+        {positions.map( (el, i) => <Radio key={el.id} name={el.name} value={el.name} />)}
+        {/* <Radio name="Front-Developer" value="10" />
         <Radio name="Backend developer" value="10" />
         <Radio name="Designer" value="10" />
-        <Radio name="QA" value="10" />
+        <Radio name="QA" value="10" /> */}
 
         {/* <input type="radio" id="contactChoice1" name="contact" value="email" />
         <label for="contactChoice1">F</label>

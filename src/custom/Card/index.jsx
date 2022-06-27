@@ -24,7 +24,6 @@ const ToolTip = ({ children, css, visibleSymbolsCount = 30 }) => {
 };
 
 const UserCard = (props) => {
-  console.log(props)
   const {photo, name, position, email, phone } = props
 
   return (

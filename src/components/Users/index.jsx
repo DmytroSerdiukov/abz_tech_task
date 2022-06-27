@@ -58,12 +58,17 @@ const Users = () => {
   const [isFetching, setFetching] = useState(false)
 
   const getMoreUsers = async() => {
-    setFetching(true)
-    const response = await axios.get(`https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${page}&count=6`)
-    const newUsers = response.data.users
-    setPage(page+1)
-    setUsers([...newUsers, ...users])
-    setFetching(false)
+    try {
+      setFetching(true)
+      const response = await axios.get(`https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${page}&count=6`)
+      const newUsers = response.data.users
+      setPage(page+1)
+      setUsers([...newUsers, ...users])
+      setFetching(false)
+    } catch (e) {
+      console.log('dsdsdsd', e.response.status)
+      setFetching(false)
+    }
   }
 
   return (
