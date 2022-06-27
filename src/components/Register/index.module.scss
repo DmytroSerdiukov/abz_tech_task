@@ -1,5 +1,8 @@
 @use '../../styles/typography';
 @use '../../styles/colors';
+@use '../../styles/media';
+
+
 
 .register__container {
     width: 1024px;
@@ -35,4 +38,25 @@
     margin-top: 50px;
     margin-bottom: 100px;
 
+}
+
+
+
+@media screen and (max-width: media.$LAPTOP) {
+    .register__container {
+        width: 1024px;
+    }
+
+}
+
+@media screen and (max-width: media.$TABLET) {
+    .register__container {
+        width: 768px;
+    }
+}
+
+@media screen and (max-width: media.$MOBILE_M) {
+    .register__container {
+        width: 328px;
+    }
 }
