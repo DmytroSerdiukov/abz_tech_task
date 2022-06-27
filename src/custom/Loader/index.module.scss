@@ -1,0 +1,19 @@
+.card__loader {
+    $BORDER_SIZE: 0.2rem;
+    $BORDER_COLOR: #00BDD3;
+    width: 48px;
+    height: 48px;
+    border-radius: 200px;
+    margin-top: 50px;
+    border-top: $BORDER_SIZE solid $BORDER_COLOR;
+    border-right: $BORDER_SIZE solid $BORDER_COLOR;
+    border-bottom: $BORDER_SIZE solid $BORDER_COLOR;
+    border-left: $BORDER_SIZE solid transparent;
+    animation: CardLoader 1s linear infinite;
+}
+
+@keyframes CardLoader {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
