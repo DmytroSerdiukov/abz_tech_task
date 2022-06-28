@@ -4,7 +4,8 @@ import {
   FormLabel,
   RadioGroup,
 } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
+import { RegisterContext } from "../../context/RegisterContext";
 import styles from './index.module.scss'
 
 
@@ -17,7 +18,9 @@ const Radio = ({ name, value }) => {
   );
 };
 
-const RadioButton = ({positions}) => {
+const RadioButton = () => {
+
+  const positions = useContext(RegisterContext)
   return (
     <form className={styles.radio__form}>
       <p className={styles.form__header}>Select your position</p>
