@@ -1,0 +1,38 @@
+@use '../../styles/typography';
+
+.tooltip__wrapper {
+    position: relative;
+    display: inline-block;
+    // display: 'flex';
+    // justify-content: 'center';
+    // align-items: 'center';
+}
+
+.tooltip__tip {
+    position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 100;
+    background-color: black;
+    @extend %body;
+    color: white;
+    padding: 3px 16px;
+    border-radius: 4px;
+
+
+
+
+    &.top {
+
+    }
+    &.left {
+
+    }
+    &.right {
+
+    }
+    &.bottom {
+        bottom: 0;
+    }
+}
