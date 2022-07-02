@@ -1,38 +1,84 @@
-@use '../../styles/typography';
+// @use '../../styles/typography';
 
-.tooltip__wrapper {
-    position: relative;
-    display: inline-block;
-    // display: 'flex';
-    // justify-content: 'center';
-    // align-items: 'center';
-}
+// .tooltip__wrapper {
+//     position: relative;
+//     display: 'flex';
+//     flex-direction: column;
+//     justify-content: 'center';
+//     align-items: center;
 
-.tooltip__tip {
-    position: absolute;
-    // left: 50%;
-    // transform: translateX(-50%);
-    white-space: nowrap;
-    z-index: 100;
+//     // &:hover {
+//     //     .tooltip__tip {
+//     //         display: flex;
+//     //         position: absolute;
+//     //         top: 25px;
+
+//     //     }
+//     // }
+//     &:hover {
+//         .tooltip {
+//             display: flex;
+//             justify-content: center;
+//             position: absolute;
+//             right: 30px;
+
+//         }
+//     }
+// }
+
+// // .tooltip__tip {
+// //     display: none;
+// //     background-color: black;
+// //     @extend %body;
+// //     color: white;
+// //     padding: 3px 16px;
+// //     border-radius: 6px;
+// //     z-index: 100;
+
+// // }
+
+// .tooltip {
+//     width: 300px;
+//     display: none;
+
+//     background-color: black;
+//     @extend %body;
+//     color: white;
+//     padding: 3px 16px;
+//     border-radius: 6px;
+// }
+
+
+.tooltip {
+    width: 450px;
+    display: none;
+    width: 300px;
     background-color: black;
-    @extend %body;
-    color: white;
-    padding: 3px 16px;
-    border-radius: 4px;
+    opacity: 1;
+    color:#fff;
+    padding: 16px 14px;
 
+}
 
+.tooltip__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    &:hover {
+        .tooltip {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: absolute;
+            border-radius: 0.375rem;
+            background-color: black;
+            z-index: 100;
+            bottom: -30px;
 
-    &.top {
-
-    }
-    &.left {
-
-    }
-    &.right {
-
-    }
-    &.bottom {
-        bottom: 0;
+        }
     }
 }
+
