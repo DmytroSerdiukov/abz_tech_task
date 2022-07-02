@@ -7,15 +7,9 @@ import { RegisterContext } from "../../context/RegisterContext";
 
 const Register = () => {
 
-
-
-
   return (
     <div className={styles.register__container}>
-      <Form />
-      <div className={styles.register__radio}>
-      </div>
-     
+      <Form /> 
     </div>
   );
 };

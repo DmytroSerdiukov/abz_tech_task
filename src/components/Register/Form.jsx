@@ -6,11 +6,18 @@ import styles from "./form.module.scss";
 import main from "./index.module.scss";
 
 import RadioButton from "../../material/RadioButton";
-import UploadButtons from "../../custom/Uploader";
+import Uploader from "../../custom/Uploader";
 import { ReactComponent as SuccessLogo } from "../../images/success-image.svg";
+import { RegisterContext } from "../../context/RegisterContext";
 
 const Basic = ({ positions }) => {
   const [isSuccess, setSuccess] = useState(false);
+
+  const {createNewUser} = useContext(RegisterContext)
+
+  const submitData = (data) => {
+    createNewUser(data)
+  }
 
   return (
     <div className={styles.form__container}>
@@ -50,6 +57,7 @@ const Basic = ({ positions }) => {
           }}
           onSubmit={(values, { setSubmitting, resetForm, setFieldValue }) => {
             setTimeout(() => {
+              submitData(values)
               // alert(JSON.stringify(values, null, 2));
               setSubmitting(false);
               setSuccess(true);
@@ -100,17 +108,12 @@ const Basic = ({ positions }) => {
                 helperText={
                   errors.phone && touched.phone
                     ? errors.phone
-                    : "+38 (XXX) XXX - XX - XX"
+                    : ""
                 }
                 error={errors.phone && touched.phone && errors.phone}
               />
               <RadioButton/>
-              <UploadButtons />
-              {/* <TextField type='file'  placeholder="Upload your photo" /> */}
-              {/* <Input
-              variant=''
-              type='file'
-            /> */}
+              <Uploader />
               <div className={styles.form__button}>
                 {values.name && values.email && values.phone ? (
                   <Button text="Submit" disabled={isSubmitting} />

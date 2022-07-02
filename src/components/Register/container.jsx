@@ -10,9 +10,11 @@ import RegisterProvider from '../../context/RegisterContext'
 const RegisterContainer = () => {
 
     const [positions, setPositions] = useState([])
+    const [token, setToken] = useState('')
 
     useEffect( () => {
         getPositions()
+        getToken()
     }, [])
     console.log(positions)
 
@@ -24,9 +26,25 @@ const RegisterContainer = () => {
         } catch(e) {
             throw e
         }
-      }
+    }
 
-    return <RegisterProvider value={positions}>
+    const getToken = async() => {
+        const token = await axios.get('https://frontend-test-assignment-api.abz.agency/api/v1/token')
+        setToken(token.token)
+    }   
+
+    const createNewUser = async(body) => {
+        try {
+            await axios.post('https://frontend-test-assignment-api.abz.agency/api/v1/users', body, {
+                headers: {token: token}
+            })
+            
+        } catch(e) {
+            throw e
+        }
+    }
+
+    return <RegisterProvider value={{positions, createNewUser}}>
         <Register />
     </RegisterProvider>
 }
