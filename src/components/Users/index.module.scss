@@ -17,23 +17,24 @@
 }
 
 .header__title {
+    padding-top: 140px;
     text-align: center;
 }
 
-.users__body {
-    position: relative;
-    width: 904px;
-    height: 537px;
+.users__cards {
+    max-width: 904px;
+    max-height: 537px;
+    margin-top: 50px;
     display: grid;
-    grid-template-columns:  282px 282px 282px;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 29px;
+    grid-template-columns: 282px 282px 282px;
+    grid-template-rows: 254px;
     row-gap: 29px;
-    align-items: center;
+    column-gap: 29px;
     justify-content: center;
-    background-color: colors.$BACKGROUND_COLOR;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
     overflow-x: hidden;
-    // flex-wrap: wrap;
 }
 
 .users__button {
@@ -46,19 +47,24 @@
         width: 1024px
     }
 
+    .users__cards {
+        width: 904px;
+    }
+
 }
 
 @media screen and (max-width: media.$TABLET) {
     .users__container {
         width: 768px;
     }
-    .users__body{
+    .users__cards{
         width: 704px;
         height: 794px;
         grid-template-columns: 344px 344px;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
         column-gap: 16px;
         row-gap: 16px;
+        margin-top: 50px;
     }
 }
 
@@ -72,14 +78,13 @@
         width: 328px;
     }
 
-    .users__body{
+    .users__cards{
         width: 328px;
         height: 1642px;
-        overflow-y: scroll;
-        overflow-x: visible;
+        // overflow-y: scroll;
+        // overflow-x: visible;
         grid-template-columns: 328px;
-        grid-template-rows: 1fr;
+        grid-template-rows: 254px;
         column-gap: 16px;
-        row-gap: 16px;
     }
 }

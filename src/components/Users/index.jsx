@@ -47,37 +47,48 @@ import Loader from "../../custom/Loader";
 //   },
 // ];
 
-const Users = () => {
+const Users = ({fetchUsers, users}) => {
 
-  useEffect( () => {
-    getMoreUsers()
-  }, [])
-
-  const [users, setUsers] = useState([])
-  const [page, setPage] = useState(1)
   const [isFetching, setFetching] = useState(false)
 
   const getMoreUsers = async() => {
-    try {
-      setFetching(true)
-      const response = await axios.get(`https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${page}&count=6`)
-      const newUsers = response.data.users
-      setPage(page+1)
-      setUsers([...newUsers, ...users])
-      setFetching(false)
-    } catch (e) {
-      console.log('dsdsdsd', e.response.status)
-      setFetching(false)
-    }
+    setFetching(true)
+    await fetchUsers()
+    setFetching(false)
   }
 
   return (
     <div className={styles.users__container}>
-      <header className={styles.users__header}>
+      <h1 className={styles.header__title}>Working with GET request</h1>
+      <div className={styles.users__cards}>
+        {!users || users.length === 0 ?
+            <Loader /> : users.map((user, index) => (
+          <UserCard key={index} 
+            photo={user.photo}
+            name={user.name}
+            position={user.position}
+            email={user.email}
+            phone={user.phone}
+          />
+        ))}      
+      </div>
+      {isFetching ? <Loader /> : 
+      <div className={styles.users__button}>
+        <Button  fn={getMoreUsers} style={{width: '120px'}} text={"Show more"} />
+      </div>}
+    </div>
+  );
+};
+
+export default Users;
+
+
+{/* <header className={styles.users__header}>
         <h1 className={styles.header__title}>Working with GET request</h1>
       </header>
       <body className={styles.users__body}>
-        {users.map((user, index) => (
+        {!users || users.length === 0 ?
+            <Loader /> : users.map((user, index) => (
           <UserCard key={index} 
             photo={user.photo}
             name={user.name}
@@ -90,9 +101,4 @@ const Users = () => {
       {isFetching ? <Loader /> : 
       <div className={styles.users__button}>
         <Button  fn={getMoreUsers} style={{width: '120px'}} text={"Show more"} />
-      </div>}
-    </div>
-  );
-};
-
-export default Users;
+      </div>} */}
