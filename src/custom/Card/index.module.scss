@@ -9,20 +9,15 @@ $CARD_HEIGHT: 254px;
     width: 282px;
     height: 254px;
     display: flex;
-    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 20px;
     box-shadow: "none";
-    font-family: 'Nunito';
-    font-size: 1rem;
-    line-height: 1.625rem;
-    font-weight: 400;
+    @extend %body;
     background-color: #fff;
     border-radius: 10px;
-    overflow-x: visible;
-    overflow-y: hidden;
     
 }
 
@@ -37,91 +32,32 @@ $CARD_HEIGHT: 254px;
     margin-top: 0;
     margin-bottom: 20px;
     border-radius: 80px;
+    background: url('../../images/photo-cover.svg');
+    background-size: contain;
+    outline: none;
+    border: 0.3px solid gray;
 }
 
-.card__tooltip {
-    // width: 100%;
-    padding: 3px 16px;
-    display: none;
-    background-color: black;
-    color: white;
-    border-radius: 4px;
-    text-align: center;
-    z-index: 100;
-    opacity: 1;
-    @extend %body;
-}
+// @mixin card__tooltip-hover {
+//     display: flex;
+//     flex-wrap: wrap;
+//     position: absolute;
+// }
+// .card__tooltip {
+//     padding: 3px 16px;
+//     display: none;
+//     background-color: black;
+//     color: white;
+//     border-radius: 4px;
+//     text-align: center;
+//     // z-index: 100;
+//     // opacity: 1;
+//     @extend %body;
 
-@mixin card__tooltip-hover {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    overflow-x: hidden;
-    position: absolute;
-}
-
-.card__title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    @extend %body;
-    color: black;
-    margin-bottom: 19px;
-    text-align: 'center';
-    overflow-x: visible;
-    overflow-y: hidden;
-    &:hover {
-        .card__tooltip {
-            @include card__tooltip-hover();
-        }
-    }
-}
-
-.card__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Nunito';
-    @extend %body;
-    text-align: center;
-    overflow-x: visible;
-    overflow-y: hidden;
-    color: black;
-
-
-
-}
-
-.content__jobTitle {
-
-    &:hover {
-        .card__tooltip {
-            @include card__tooltip-hover();
-        }
-    }
-}
-
-.content__email {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    &:hover {
-        .card__tooltip {
-            @include card__tooltip-hover();
-        }
-    }
-}
-.content__phone {
-    &:hover {
-        .card__tooltip {
-            @include card__tooltip-hover();
-        }
-    }
-}
-
-
-
+//     &:hover {
+//         @include card__tooltip-hover();
+//     }
+// }
 
 @media screen and (max-width: media.$LAPTOP) {
     .card__container {
