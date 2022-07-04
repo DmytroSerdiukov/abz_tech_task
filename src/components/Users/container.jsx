@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Users from '.'
 
-import * as axios from 'axios'
 import useUserData from '../../hooks/fetchUsers'
 
 const UsersContainer = () => {

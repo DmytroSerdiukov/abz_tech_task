@@ -2,6 +2,10 @@
 @use '../../styles/colors';
 @use '../../styles/media';
 
+
+
+$HEIGHT: 100%;
+
 .users__container {
     display: flex;
     flex-direction: column;
@@ -12,18 +16,17 @@
     margin: auto;
 }
 
-.users__header {
-    margin: 140px 0px 50px 0px;
-}
+// .users__header {
+//     margin: 140px 0px 50px 0px;
+// }
 
 .header__title {
-    padding-top: 140px;
+    margin-top: 140px;
     text-align: center;
 }
 
 .users__cards {
-    max-width: 904px;
-    max-height: 537px;
+    width: 904px;
     margin-top: 50px;
     display: grid;
     grid-template-columns: 282px 282px 282px;
@@ -33,8 +36,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: auto;
-    overflow-x: hidden;
+    // overflow: hidden;
+    // overflow-y: auto;
 }
 
 .users__button {
@@ -44,11 +47,16 @@
 
 @media screen and (max-width: media.$LAPTOP) {
     .users__container {
-        width: 1024px
+        width: 1024px;
+
     }
 
     .users__cards {
         width: 904px;
+        // min-height:537px;
+        max-height: 538px;
+        overflow: hidden;
+        overflow-y: auto;
     }
 
 }
@@ -59,12 +67,15 @@
     }
     .users__cards{
         width: 704px;
-        height: 794px;
+        min-height:794px;
+        max-height: 794px;
         grid-template-columns: 344px 344px;
-        grid-template-rows: 1fr;
+        grid-template-rows: 254px 254px 254px;
         column-gap: 16px;
         row-gap: 16px;
         margin-top: 50px;
+        overflow: hidden;
+        overflow-y: auto;
     }
 }
 

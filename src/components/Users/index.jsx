@@ -47,7 +47,7 @@ import Loader from "../../custom/Loader";
 //   },
 // ];
 
-const Users = ({fetchUsers, users}) => {
+const Users = ({fetchUsers, users, success}) => {
 
   const [isFetching, setFetching] = useState(false)
 
@@ -72,9 +72,9 @@ const Users = ({fetchUsers, users}) => {
           />
         ))}      
       </div>
-      {isFetching ? <Loader /> : 
+      {isFetching ? <Loader /> : success &&
       <div className={styles.users__button}>
-        <Button  fn={getMoreUsers} style={{width: '120px'}} text={"Show more"} />
+        <Button fn={getMoreUsers} style={{width: '120px'}} text={"Show more"} />
       </div>}
     </div>
   );
