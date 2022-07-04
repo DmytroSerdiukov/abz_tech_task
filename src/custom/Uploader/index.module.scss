@@ -1,11 +1,11 @@
 .uploader__container {
-    position: relative;
+    // position: relative;
     display: flex;
     flex-direction: row;
-
+    // margin-top: 47px;
     width: 380px;
     height: 54px;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .input__label {
@@ -35,6 +35,7 @@
 }
 
 .uploader__input {
+    display: none;
     position: absolute;
     top: 0px;
     left: 0px;
