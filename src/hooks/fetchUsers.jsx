@@ -11,7 +11,8 @@ const useUserData = () => {
     const fetchUsers = async() => {
         try {
             const response = await axios.get(url)
-            const newUsers = response.data.users
+            const newUsers = response.data.users.sort( (a, b) => b.registration_timestamp - a.registration_timestamp)
+            console.log(newUsers)
             setPage(page+1)
             setUsers([...newUsers, ...users])
             setSuccess(response.data.success)
