@@ -56,9 +56,9 @@ const Basic = () => {
         <Formik
           initialValues={
             {
-              name: "dmytro",
-              email: "dmytro@gmail.com",
-              phone: "380596335545",
+              name: "",
+              email: "",
+              phone: "38",
               position_id: "",
               photo: new FormData(),
             }
