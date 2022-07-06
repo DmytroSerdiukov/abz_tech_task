@@ -1,0 +1,51 @@
+.uploader__container {
+    // position: relative;
+    display: flex;
+    flex-direction: row;
+    // margin-top: 47px;
+    width: 380px;
+    height: 54px;
+    // overflow: hidden;
+}
+
+.input__label {
+    // position: absolute;
+    top:0px;
+    left:0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 83px;
+    height: 54px;
+    border: 1px solid black;
+    border-radius: 4px 0px 0px 4px;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.input__field {
+    width: 297px;
+    height: 54px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 16px;
+    align-items: center;
+    border: 1px solid #D0CFCF;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.uploader__input {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    width: 380px;
+    height: 54px;
+    text-align: right;
+    font-size: 1rem;
+    background-color: white;
+    color: rgba(0, 0, 0, 0);
+    visibility: hidden;
+    // border: 1px solid black
+}

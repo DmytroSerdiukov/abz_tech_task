@@ -16,13 +16,12 @@ const RegisterContainer = () => {
         getPositions()
         getToken()
     }, [])
-    console.log(positions)
+    
 
     const getPositions = async() => {
         try {
             const response = await axios.get('https://frontend-test-assignment-api.abz.agency/api/v1/positions')
             setPositions(response.data.positions)
-            console.log(response)
         } catch(e) {
             throw e
         }
@@ -30,14 +29,19 @@ const RegisterContainer = () => {
 
     const getToken = async() => {
         const token = await axios.get('https://frontend-test-assignment-api.abz.agency/api/v1/token')
-        setToken(token.token)
+        setToken(token.data.token)
     }   
 
     const createNewUser = async(body) => {
         try {
-            await axios.post('https://frontend-test-assignment-api.abz.agency/api/v1/users', body, {
-                headers: {token: token}
-            })
+
+            const headers = {
+                token: token
+            }
+            await axios.post('https://frontend-test-assignment-api.abz.agency/api/v1/users',
+                body, 
+                {headers: headers}
+            )
             
         } catch(e) {
             throw e
