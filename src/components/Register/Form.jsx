@@ -1,14 +1,9 @@
 import React, { useContext, useRef, useState } from "react";
+
+import * as yup from 'yup';
 import { Formik, Form } from "formik";
 import Input from "../../material/Input";
 import Button from "../../custom/Button";
-import styles from "./form.module.scss";
-import radio from "./radio.module.scss";
-import main from "./index.module.scss";
-import uploaderStyles from './uploader.module.scss';
-
-import { ReactComponent as SuccessLogo } from "../../images/success-image.svg";
-import { RegisterContext } from "../../context/RegisterContext";
 import {
   FormControl,
   FormControlLabel,
@@ -16,10 +11,32 @@ import {
   Radio,
   RadioGroup,
 } from "@mui/material";
-import useRadio from "../../hooks/selectRadioButton";
+
 import useUploader from "../../hooks/fileUploader";
+import useRadio from "../../hooks/selectRadioButton";
+import { RegisterContext } from "../../context/RegisterContext";
+
+import { ReactComponent as SuccessLogo } from "../../images/success-image.svg";
 import {ReactComponent as PhotoCover} from '../../images/photo-cover.svg'
 
+import styles from "./form.module.scss";
+import radio from "./radio.module.scss";
+import main from "./index.module.scss";
+import uploaderStyles from './uploader.module.scss';
+
+const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+const Schema = yup.object().shape({
+  name: yup.string().min(2, 'name should be at least 2 symbols').required('Required'),
+  email: yup.string().email('Invalid email').required('Required'),
+  phone: yup.string().min(12, 'Phone must be 12 symbols').max(12, 'Phone must be 12 symbols').required('Required'),
+  photo: yup.object()
+  // name: yup.string(),
+  // email: yup.string(),
+  // phone: yup.string(),
+  // photo: yup.object()
+});
+
+Schema.isValid('dmytro.serdiukov@gmail.com', 'not.a.valid.email')
 
 const Basic = () => {
   const {inputRef} = useUploader()
@@ -63,35 +80,35 @@ const Basic = () => {
               photo: new FormData(),
             }
           }
-          validate={(values) => {
-            const errors = {};
-            if (!values.name) {
-              errors.name = "Required";
-            }
-            if (!values.email) {
-              errors.email = "Required";
-            } else if (
-              !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-            ) {
-              errors.email = "Invalid email address";
-            }
-            if (!values.phone) {
-              errors.phone = "Required";
-            }
-            if (!values.position_id || values.position_id === "")
-              errors.position_id = "Required";
-            if (!values.photo.name)
-              values.photo = PhotoCover
-            // else if (
-            //     !/\+\d{2}\d{3}\d{3}\d{4}/g.test(values.phone)
-            // )
-            //     errors.phone = 'Wrong phone number, should be +38 (XXX) XXX - XX - XX '
-            return errors;
-          }}
+          validationSchema={Schema}
+          // validate={(values) => {
+          //   const errors = {};
+          //   if (!values.name) {
+          //     errors.name = "Required";
+          //   }
+          //   if (!values.email) {
+          //     errors.email = "Required";
+          //   } else if (
+          //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+          //   ) {
+          //     errors.email = "Invalid email address";
+          //   }
+          //   if (!values.phone) {
+          //     errors.phone = "Required";
+          //   }
+          //   if (!values.position_id || values.position_id === "")
+          //     errors.position_id = "Required";
+
+          //   if (
+          //       !/\+\d{2}\d{3}\d{3}\d{4}/g.test(values.phone)
+          //   )
+          //       errors.phone = 'Wrong phone number, should be +38 (XXX) XXX - XX - XX '
+          //   return errors;
+          // }}
           
           onSubmit={(
             values,
-            { setSubmitting, resetForm, setFieldValue, setFieldTouched }
+            { setSubmitting, resetForm, setFieldValue, setFieldTouched },
           ) => {
             setTimeout(() => {
               const formData = new FormData()
@@ -99,7 +116,8 @@ const Basic = () => {
               formData.append('email', values.email)
               formData.append('phone', values.phone)
               formData.append('position_id', values.position_id)
-              formData.append('photo', values.photo, values.photo.name)
+              // formData.append('photo', values.photo , values.photo.name)
+              formData.append('photo', PhotoCover, PhotoCover.name)
               submitData(formData);
               setSubmitting(false);
               setSuccess(true);
@@ -231,8 +249,9 @@ const Basic = () => {
               </label>
 
               <div className={styles.form__button}>
-                {values.name && values.email && values.phone ? (
+                {values.name && values.email && values.phone && values.position_id ? (
                   <Button
+                    type='button'
                     text="Sign up"
                     css={{ fontWeight: 100 }}
                     disabled={isSubmitting}
