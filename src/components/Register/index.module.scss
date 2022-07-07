@@ -40,26 +40,26 @@
 
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (max-width: 2560px) {
     .register__container {
         width: 1170px;
     }
 }
 
-@media screen and (min-width: media.$LAPTOP) {
+@media screen and (max-width: media.$LAPTOP) {
     .register__container {
         width: 1024px;
     }
 
 }
 
-@media screen and (min-width: media.$TABLET) {
+@media screen and (max-width: media.$TABLET) {
     .register__container {
         width: 768px;
     }
 }
 
-@media screen and (min-width: media.$MOBILE_M) {
+@media screen and (max-width: media.$MOBILE_M) {
     .register__container {
         width: 360px;
     }

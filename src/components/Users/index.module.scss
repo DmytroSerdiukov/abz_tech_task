@@ -44,7 +44,7 @@ $HEIGHT: 100%;
     margin-top: 50px;
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (max-width: 2560px) {
     .users__container {
         width: 1170px;
 
@@ -58,7 +58,7 @@ $HEIGHT: 100%;
     }
 }
 
-@media screen and (min-width: media.$LAPTOP) {
+@media screen and (max-width: media.$LAPTOP) {
     .users__container {
         width: 1024px;
 
@@ -74,7 +74,7 @@ $HEIGHT: 100%;
 
 }
 
-@media screen and (min-width: media.$TABLET) {
+@media screen and (max-width: media.$TABLET) {
     .users__container {
         width: 768px;
     }
@@ -92,7 +92,7 @@ $HEIGHT: 100%;
     }
 }
 
-@media screen and (min-width: media.$MOBILE_M) {
+@media screen and (max-width: media.$MOBILE_M) {
     .users__container {
         width: 360px;
 
