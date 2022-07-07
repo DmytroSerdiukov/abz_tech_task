@@ -40,7 +40,11 @@
 
 }
 
-
+@media screen and (max-width: 2560px) {
+    .register__container {
+        width: 1170px;
+    }
+}
 
 @media screen and (max-width: media.$LAPTOP) {
     .register__container {
@@ -57,6 +61,9 @@
 
 @media screen and (max-width: media.$MOBILE_M) {
     .register__container {
-        width: 328px;
+        width: 360px;
+    }
+    .register__form {
+        width: 320px;
     }
 }

@@ -44,6 +44,19 @@ $HEIGHT: 100%;
     margin-top: 50px;
 }
 
+@media screen and (max-width: 2560px) {
+    .users__container {
+        width: 1170px;
+
+    }
+    .users__cards {
+        width: 904px;
+        // min-height:537px;
+        max-height: 538px;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+}
 
 @media screen and (max-width: media.$LAPTOP) {
     .users__container {
@@ -91,7 +104,8 @@ $HEIGHT: 100%;
 
     .users__cards{
         width: 328px;
-        height: 1642px;
+        min-height: 1642px;
+        // overflow: hidden;
         // overflow-y: scroll;
         // overflow-x: visible;
         grid-template-columns: 328px;

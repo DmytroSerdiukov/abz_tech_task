@@ -28,6 +28,13 @@
     margin-left: 60px;
 }
 
+
+@media screen and (max-width: 2560px) {
+    .header {
+        width: 1170px;
+    }
+}
+
 @media screen and (max-width: media.$LAPTOP) {
     .header {
         width: 1024px;

@@ -24,3 +24,10 @@
 .font {
     @extend %body;
 }
+
+@media screen and (max-width: 320px) {
+    .radio__form {
+        width: 320px;
+    
+    }
+}

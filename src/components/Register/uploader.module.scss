@@ -49,3 +49,18 @@
     visibility: hidden;
     // border: 1px solid black
 }
+
+@media screen and (max-width: 320px) {
+    .uploader__container {
+        width: 320px;
+    }
+    .uploader__input {
+       
+        width: 320px;
+    }
+    .input__field {
+        width: 240px;
+       
+    }
+
+}
