@@ -33,20 +33,20 @@
 }
 
 
-@media screen and (max-width: 2560px) {
+@media screen and (min-width: 2560px) {
     .description {
         width: 1170px;
     }
 }
 
 
-@media screen and (max-width: media.$LAPTOP) {
+@media screen and (min-width: media.$LAPTOP) {
     .description {
         width: 1024px;
     }
 }
 
-@media screen and (max-width: media.$TABLET) {
+@media screen and (min-width: media.$TABLET) {
     .description {
         width: 768px;
         height: 500px;
@@ -57,7 +57,7 @@
     }
 }
 
-@media screen and (max-width: media.$MOBILE_M) {
+@media screen and (min-width: media.$MOBILE_M) {
     .description {
         width: 328px;
         height: 500px;
