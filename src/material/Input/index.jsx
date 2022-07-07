@@ -11,7 +11,8 @@ export default function Input({label = 'Value', ...props}) {
         "& .MuiTextField-root": { fontSize: '1rem',
         marginTop: '-16px', 
         marginBottom: '49px', 
-        border: 'none'
+        border: 'none',
+
         },
       }}
       noValidate
@@ -24,7 +25,7 @@ export default function Input({label = 'Value', ...props}) {
           style: { border: 'none',
           fontFamily: 'Nunito',
           padding: '12px 16px',
-          zIndex: 1
+          zIndex: 1,
         }
         }}
         InputProps={{disableUnderline: true, style: style}}
@@ -38,8 +39,12 @@ const style = {
   border: '1px solid #D0CFCF',
   outline: 'false',
   borderRadius: '4px',
-  width:380,
+  // width:380,
+  width:320,
   height: 55,
   fontSize: '1rem',
-  lineHeight: '1.3rem'
+  lineHeight: '1.3rem',
+  ['@media (max-width:320px)']: { // eslint-disable-line no-useless-computed-key
+    width: 320
+  }
 }
