@@ -8,7 +8,7 @@
 }
 
 .container {
-    // max-width: 1024px;
+    width: 1024px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,15 +29,44 @@
 }
 
 
-@media screen and (max-width: 2560px) {
+@media (min-width: 1920px) and (max-width: 2560px) {
     .header {
+        width: 2560px;
+    }
+
+    .container {
         width: 1170px;
+        display: flex;
+        flex-direction: row;
+        // justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        margin: auto;
+    }
+    .logo {
+        margin-top: 4px;
+        margin-left: 0px;
+    }
+    .container_buttons {
+        width: 210px;
+        margin-right: 0px;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
 @media screen and (max-width: media.$LAPTOP) {
     .header {
         width: 1024px;
+    }
+    .container {
+        width: 1024px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        margin: auto;
     }
 }
 

@@ -1,5 +1,8 @@
 @use '../../styles/typography';
 @use '../../styles/media';
+@use '../../styles/colors';
+
+
 
 .description {
     display: flex;
@@ -33,9 +36,15 @@
 }
 
 
-@media screen and (max-width: 2560px) {
+@media (min-width: 1920px) and (max-width: 2560px) {
     .description {
         width: 1170px;
+    }
+
+    .description__background {
+        width: 2560px;
+        background-color: colors.$BACKGROUND_COLOR;
+        margin: auto;
     }
 }
 
@@ -44,12 +53,18 @@
     .description {
         width: 1024px;
     }
+    .description__background {
+        width: 1024px;
+    }
 }
 
 @media screen and (max-width: media.$TABLET) {
     .description {
         width: 768px;
         height: 500px;
+    }
+    .description__background {
+        width: 768px;
     }
 
     .description__header {
@@ -62,6 +77,9 @@
         width: 360px;
         height: 500px;
         background-size: cover;
+    }
+    .description__background {
+        width: 360px;
     }
 
     .description__header {
