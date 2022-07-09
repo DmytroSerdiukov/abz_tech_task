@@ -47,18 +47,22 @@ $HEIGHT: 100%;
 @media (min-width: 1920px) and (max-width: 2560px) {
     .users__background {
         width: 2560px;
-        background: colors.$BACKGROUND_COLOR
+        background: colors.$BACKGROUND_COLOR;
     }
     .users__container {
         width: 1170px;
     }
 
     .users__cards {
-        width: 904px;
+        width: 1168px;
         min-height:537px;
         max-height: 538px;
         overflow: hidden;
         overflow-y: auto;
+        grid-template-columns: 370px 370px 370px;
+        grid-template-rows: 254px;
+        row-gap: 29px;
+        column-gap: 29px;
     }
 }
 

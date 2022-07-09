@@ -83,7 +83,7 @@ const Users = ({ fetchUsers, users, success }) => {
             <div className={styles.users__button}>
               <Button
                 fn={getMoreUsers}
-                style={{ width: "120px" }}
+                css={{ width: 120 }}
                 text={"Show more"}
               />
             </div>
