@@ -47,43 +47,57 @@ import Loader from "../../custom/Loader";
 //   },
 // ];
 
-const Users = ({fetchUsers, users, success}) => {
+const Users = ({ fetchUsers, users, success }) => {
+  const [isFetching, setFetching] = useState(false);
 
-  const [isFetching, setFetching] = useState(false)
-
-  const getMoreUsers = async() => {
-    setFetching(true)
-    await fetchUsers()
-    setFetching(false)
-  }
+  const getMoreUsers = async () => {
+    setFetching(true);
+    await fetchUsers();
+    setFetching(false);
+  };
 
   return (
-    <div className={styles.users__container}>
-      <h1 className={styles.header__title}>Working with GET request</h1>
-      <div className={styles.users__cards}>
-        {!users || users.length === 0 ?
-            <Loader /> : users.map((user, index) => (
-          <UserCard key={index} 
-            photo={user.photo}
-            name={user.name}
-            position={user.position}
-            email={user.email}
-            phone={user.phone}
-          />
-        ))}      
+    <div className={styles.users__background}>
+      <div className={styles.users__container}>
+        <h1 className={styles.header__title}>Working with GET request</h1>
+        <div className={styles.users__cards}>
+          {!users || users.length === 0 ? (
+            <Loader />
+          ) : (
+            users.map((user, index) => (
+              <UserCard
+                key={index}
+                photo={user.photo}
+                name={user.name}
+                position={user.position}
+                email={user.email}
+                phone={user.phone}
+              />
+            ))
+          )}
+        </div>
+        {isFetching ? (
+          <Loader />
+        ) : (
+          success && (
+            <div className={styles.users__button}>
+              <Button
+                fn={getMoreUsers}
+                style={{ width: "120px" }}
+                text={"Show more"}
+              />
+            </div>
+          )
+        )}
       </div>
-      {isFetching ? <Loader /> : success &&
-      <div className={styles.users__button}>
-        <Button fn={getMoreUsers} style={{width: '120px'}} text={"Show more"} />
-      </div>}
     </div>
   );
 };
 
 export default Users;
 
-
-{/* <header className={styles.users__header}>
+{
+  /* <header className={styles.users__header}>
         <h1 className={styles.header__title}>Working with GET request</h1>
       </header>
       <body className={styles.users__body}>
@@ -101,4 +115,5 @@ export default Users;
       {isFetching ? <Loader /> : 
       <div className={styles.users__button}>
         <Button  fn={getMoreUsers} style={{width: '120px'}} text={"Show more"} />
-      </div>} */}
+      </div>} */
+}
