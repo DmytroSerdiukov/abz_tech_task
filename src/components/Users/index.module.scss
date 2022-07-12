@@ -104,6 +104,29 @@ $HEIGHT: 100%;
 
 @media screen and (max-width: media.$MOBILE_L) {
     .users__container {
+        width: 425px;
+
+    }
+
+    .header__title {
+        width: 328px;
+    }
+
+    .users__cards{
+        width: 425px;
+        min-height: 1642px;
+        // overflow: hidden;
+        // overflow-y: scroll;
+        // overflow-x: visible;
+        grid-template-columns: 328px;
+        grid-template-rows: 254px;
+        column-gap: 16px;
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width: media.$MOBILE_M) {
+    .users__container {
         width: 360px;
 
     }

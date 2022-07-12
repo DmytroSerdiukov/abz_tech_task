@@ -74,6 +74,28 @@
 
 @media screen and (max-width: media.$MOBILE_L) {
     .description {
+        width: 425px;
+        height: 500px;
+        background-size: cover;
+    }
+    .description__background {
+        width: 425px;
+    }
+
+    .description__header {
+        width: 328px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .description__content {
+        width: 328px;
+    }
+}
+
+
+@media screen and (max-width: media.$MOBILE_M) {
+    .description {
         width: 360px;
         height: 500px;
         background-size: cover;

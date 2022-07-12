@@ -61,6 +61,20 @@
 
 @media screen and (max-width: media.$MOBILE_L) {
     .register__container {
+        width: 425px;
+    }
+    .register__form {
+        width: 320px;
+    }
+    .container__header {
+        width: 290px;
+        // padding-top: 140px;
+        // padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: media.$MOBILE_M) {
+    .register__container {
         width: 360px;
     }
     .register__form {

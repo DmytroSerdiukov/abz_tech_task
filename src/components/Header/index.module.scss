@@ -90,8 +90,26 @@
         margin-left: 32px;
     }
 }
-
 @media screen and (max-width: media.$MOBILE_L) {
+    .header {
+        width: 425px;
+    }
+    .container {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .logo {
+        margin-left: 16px;
+    }
+    .container_buttons {
+        width: 210px;
+        margin-right: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: media.$MOBILE_M) {
     .header {
         width: 360px;
     }
