@@ -3,6 +3,7 @@ import Button from "../../custom/Button";
 import styles from './description.module.scss'
 const Description = () => {
   return (
+    <div className={styles.description__background}>
     <div className={styles.description}>
       <h1 className={styles.description__header}>Test assignment for front-end developer</h1>
       <p className={styles.description__content}>
@@ -16,6 +17,7 @@ const Description = () => {
       <Button text="Sign up"/>
 
       </div>
+    </div>
     </div>
 
   );

@@ -59,6 +59,13 @@ $CARD_HEIGHT: 254px;
 //     }
 // }
 
+@media (min-width: 1920px) and (max-width: 2560px) {
+    .card__container {
+        width: 370px;
+        height: $CARD_HEIGHT;
+    }
+}
+
 @media screen and (max-width: media.$LAPTOP) {
     .card__container {
         width: $CARD_WIDTH;

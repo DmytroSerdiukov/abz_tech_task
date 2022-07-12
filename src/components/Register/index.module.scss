@@ -40,9 +40,9 @@
 
 }
 
-@media screen and (max-width: 2560px) {
+@media (min-width: 1920px) and (max-width: 2560px) {
     .register__container {
-        width: 1170px;
+        width: 2560px;
     }
 }
 
@@ -65,5 +65,10 @@
     }
     .register__form {
         width: 320px;
+    }
+    .container__header {
+        width: 290px;
+        // padding-top: 140px;
+        // padding-bottom: 50px;
     }
 }

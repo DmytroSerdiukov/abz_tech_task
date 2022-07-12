@@ -2,9 +2,12 @@
 
 
 .radio__form {
+    padding-left: 0px;
     width: 380px;
     height:161px;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     @extend %body;
 
 }
@@ -16,7 +19,8 @@
 .radio__list {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
     @extend %body;
 
 }

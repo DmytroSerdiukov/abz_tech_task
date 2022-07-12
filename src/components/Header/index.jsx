@@ -21,9 +21,7 @@ const Header = (props) => {
           </div>
         </div>
       </header>
-      <body>
         <Description />
-      </body>
     </>
   );
 };
