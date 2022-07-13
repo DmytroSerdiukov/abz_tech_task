@@ -114,7 +114,7 @@ const Basic = () => {
 
   const fields_sizes = {
       md: 380,
-      sm: 328,
+      sm: 380,
       xs: 328
   }
   const submitData = (data) => {

@@ -16,8 +16,8 @@ const Header = (props) => {
             <Logo />
           </div>
           <div className={styles.container_buttons}>
-            <Button text="Users" />
-            <Button text="Sign up" />
+            <Button  text="Users" />
+            <Button  text="Sign up" />
           </div>
         </div>
       </header>

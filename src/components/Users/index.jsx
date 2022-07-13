@@ -8,7 +8,7 @@ import * as axios from "axios";
 import Loader from "../../custom/Loader";
 
 //for debug
-// const data = [
+// const users = [
 //   {
 //     name: "Salvador Stewart Flynn Thomas Salva...",
 //       position: 'Leading specialist of the department of c...',
@@ -47,7 +47,9 @@ import Loader from "../../custom/Loader";
 //   },
 // ];
 
-const Users = ({ fetchUsers, users, success }) => {
+const Users = ({ fetchUsers,
+  users,
+  success }) => {
   const [isFetching, setFetching] = useState(false);
 
   const getMoreUsers = async () => {

@@ -22,7 +22,7 @@ const UserCard = (props) => {
       <Tooltip>
         {name}
       </Tooltip>
-      <div style={{marginTop: '20px'}}>
+      <div style={{paddingTop: '20px'}}>
         <Tooltip>
           {position}
         </Tooltip>

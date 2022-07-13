@@ -22,7 +22,7 @@
     border: 1px solid black;
     border-radius: 4px 0px 0px 4px;
     z-index: 1;
-    background-color: #fff;
+    // background-color: #fff;
 }
 
 .input__field {
@@ -33,6 +33,7 @@
     padding-left: 16px;
     padding-bottom: 3px;
     align-items: center;
+    color: gray;
     border: 1px solid #D0CFCF;
     border-radius: 0px 4px 4px 0px;
 }
@@ -53,6 +54,28 @@
     // border: 1px solid black
 }
 
+@media screen and (max-width: 360px) {
+    .uploader__container {
+        width: 360px;
+    }
+    .uploader__input {
+       
+        width: 360px;
+    }
+    .input__field {
+        width: 245px;
+       
+    }
+
+    .input__label {
+
+        width: 83px;
+        z-index: 1;
+        background-color: #fff;
+    }
+
+}
+
 @media screen and (max-width: 320px) {
     .uploader__container {
         width: 320px;
@@ -64,6 +87,13 @@
     .input__field {
         width: 240px;
        
+    }
+
+    .input__label {
+
+        width: 83px;
+        z-index: 1;
+        background-color: #fff;
     }
 
 }

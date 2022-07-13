@@ -40,7 +40,7 @@
 
 }
 
-@media (min-width: 1920px) and (max-width: 2560px) {
+@media (min-width: 1920px) {
     .register__container {
         width: 2560px;
     }
@@ -62,13 +62,14 @@
 @media screen and (max-width: media.$MOBILE_L) {
     .register__container {
         width: 425px;
+
     }
     .register__form {
         width: 320px;
     }
     .container__header {
         width: 290px;
-        // padding-top: 140px;
+        padding-top: 140px;
         // padding-bottom: 50px;
     }
 }

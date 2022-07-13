@@ -44,10 +44,11 @@ $HEIGHT: 100%;
     margin-top: 50px;
 }
 
-@media (min-width: 1920px) and (max-width: 2560px) {
+@media (min-width: 1920px) {
     .users__background {
         width: 2560px;
-        background: colors.$BACKGROUND_COLOR;
+        background-color: colors.$BACKGROUND_COLOR;
+        margin: auto;
     }
     .users__container {
         width: 1170px;
@@ -90,7 +91,7 @@ $HEIGHT: 100%;
     }
     .users__cards{
         width: 704px;
-        min-height:794px;
+        // min-height:794px;
         max-height: 794px;
         grid-template-columns: 344px 344px;
         grid-template-rows: 254px 254px 254px;
@@ -114,7 +115,7 @@ $HEIGHT: 100%;
 
     .users__cards{
         width: 425px;
-        min-height: 1642px;
+        max-height: 1642px;
         // overflow: hidden;
         // overflow-y: scroll;
         // overflow-x: visible;
@@ -137,7 +138,7 @@ $HEIGHT: 100%;
 
     .users__cards{
         width: 328px;
-        min-height: 1642px;
+        max-height: 1642px;
         // overflow: hidden;
         // overflow-y: scroll;
         // overflow-x: visible;

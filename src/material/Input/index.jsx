@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { createTheme, InputLabel } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
+import zIndex from "@mui/material/styles/zIndex";
 
 
 const theme = createTheme({
@@ -20,10 +21,25 @@ const theme = createTheme({
             sm: 328,
             xs: 328
           },
+          border: '1px solid #D0CFCF',
+          borderRadius: '4px',
           height: 54,
           fontSize: '1rem',
           lineHeight: '1.625rem',
+          disableUnderLine: true,
+
+          '& input': {
+ 
+
+          },
+          '& label': {
+
+            top: -4.5,
+            left: 15,
+          }
         },
+        InputProps: {
+        }
         
       }
     }
@@ -37,6 +53,13 @@ export default function Input({ label = "Value", ...props }) {
     <ThemeProvider theme={theme}>
       
       <TextField 
+        variant="standard"
+        InputProps={{
+          disableUnderline: true,
+
+        }}
+        InputLabelProps={{
+        }}
         helperText={''}
         label={label}
         {...props}>
