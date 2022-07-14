@@ -29,8 +29,8 @@ $CARD_HEIGHT: 254px;
     width: 70px;
     height: 70px;
     margin: "auto";
-    // margin-top: 0;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 40px;
     border-radius: 80px;
     background: url('../../images/photo-cover.svg');
     background-size: contain;
@@ -87,10 +87,4 @@ $CARD_HEIGHT: 254px;
         height: $CARD_HEIGHT;
     }
 
-    .card__content {
-    }
-
-    .card__title {
-        // margin-top: 0px;
-    }
 }
