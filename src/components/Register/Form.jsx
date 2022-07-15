@@ -328,11 +328,11 @@ const Basic = () => {
                     <Button
                       type="submit"
                       text="Sign up"
-                      css={{ fontWeight: 100 }}
+                      css={{ fontWeight: 100,  paddingTop: 1, paddingLeft: 2  }}
                       disabled={isSubmitting}
                     />
                   ) : (
-                    <Button text="Sign up" css={{ fontWeight: 100 }} disabled />
+                    <Button text="Sign up" css={{ fontWeight: 100, paddingTop: 5, paddingLeft: 2 }} disabled />
                   )}
                 </div>
               </Form>
