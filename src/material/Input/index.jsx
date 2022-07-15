@@ -28,6 +28,9 @@ const theme = createTheme({
           '& label': {
             top: -4.5,
             left: 15,
+          },
+          '& input': {
+            paddingLeft: 15
           }
         },    
       }
