@@ -37,27 +37,6 @@ $CARD_HEIGHT: 254px;
     border: 0.3px solid gray;
 }
 
-// @mixin card__tooltip-hover {
-//     display: flex;
-//     flex-wrap: wrap;
-//     position: absolute;
-// }
-// .card__tooltip {
-//     padding: 3px 16px;
-//     display: none;
-//     background-color: black;
-//     color: white;
-//     border-radius: 4px;
-//     text-align: center;
-//     // z-index: 100;
-//     // opacity: 1;
-//     @extend %body;
-
-//     &:hover {
-//         @include card__tooltip-hover();
-//     }
-// }
-
 @media (min-width: 1920px) {
     .card__container {
         width: 370px;

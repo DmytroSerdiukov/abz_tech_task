@@ -1,12 +1,10 @@
 import React from "react";
+
+import Tooltip from "../Tooltip";
+import PhotoCover from "../../images/photo-cover.svg";
+
 import styles from "./index.module.scss";
 
-import PhotoCover from "../../images/photo-cover.svg";
-import Tooltip from "../Tooltip";
-
-const Loader = () => {
-  return <div className={styles.card__loader}></div>;
-};
 
 const UserCard = (props) => {
   const { photo, name, position, email, phone } = props;
