@@ -35,8 +35,6 @@ const theme = createTheme({
   }
 })
 
-console.log(theme)
-
 export default function Input({ label = "Value", ...props }) {
   return (
     <ThemeProvider theme={theme}>
