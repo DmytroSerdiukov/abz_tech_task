@@ -1,9 +1,8 @@
 import React from "react";
-// import LOGO from '../images/Logo.svg'
-import { ReactComponent as Logo } from "../../images/Logo.svg";
-import Description from "./Description";
 
+import Description from './Description'
 import Button from "../../custom/Button";
+import { ReactComponent as Logo } from "../../images/Logo.svg";
 
 import styles from "./index.module.scss";
 
