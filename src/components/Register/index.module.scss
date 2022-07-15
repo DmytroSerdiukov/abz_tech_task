@@ -3,7 +3,6 @@
 @use '../../styles/media';
 
 
-
 .register__container {
     width: 1024px;
     margin: auto;
@@ -31,13 +30,11 @@
 .register__radio{
     display: 'flex';
     justify-content: flex-start;
-
 }
 
 .register__button {
     margin-top: 10px;
     margin-bottom: 100px;
-
 }
 
 @media (min-width: 1920px) {
@@ -83,7 +80,5 @@
     }
     .container__header {
         width: 290px;
-        // padding-top: 140px;
-        // padding-bottom: 50px;
     }
 }

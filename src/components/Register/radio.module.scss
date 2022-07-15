@@ -9,12 +9,8 @@
     justify-content: flex-start;
     align-items: center;
     @extend %body;
-
 }
 
-.form__header {
-    // margin-bottom: 21px;
-}
 
 .radio__list {
     display: flex;
@@ -22,22 +18,14 @@
     justify-content: center;
     align-items: flex-start;
     @extend %body;
-
 }
 
 .font {
     @extend %body;
 }
 
-// @media screen and (max-width: 360px) {
-//     .radio__form {
-//         margin-top: 10px;
-//     }
-// }
-
 @media screen and (max-width: 320px) {
     .radio__form {
         width: 320px;
-    
     }
 }

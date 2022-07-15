@@ -1,20 +1,15 @@
 .uploader__container {
-    // position: relative;
     display: flex;
     flex-direction: row;
-    // margin-top: 47px;
     width: 380px;
     height: 54px;
-    // overflow: hidden;
 }
 
 .input__label {
-    // position: absolute;
     top:0px;
     left:0px;
     display: flex;
     justify-content: center;
-    // padding: 14px 15px;
     padding-bottom: 4px;
     align-items: center;
     width: 83px;
@@ -22,7 +17,6 @@
     border: 1px solid black;
     border-radius: 4px 0px 0px 4px;
     z-index: 1;
-    // background-color: #fff;
 }
 
 .input__field {
@@ -51,7 +45,6 @@
     background-color: white;
     color: rgba(0, 0, 0, 0);
     visibility: hidden;
-    // border: 1px solid black
 }
 
 @media screen and (max-width: 360px) {

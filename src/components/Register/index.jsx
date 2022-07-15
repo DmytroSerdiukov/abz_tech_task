@@ -1,8 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import Form from './Form'
 import styles from "./index.module.scss";
-import * as axios from 'axios'
-import { RegisterContext } from "../../context/RegisterContext";
 
 
 const Register = () => {

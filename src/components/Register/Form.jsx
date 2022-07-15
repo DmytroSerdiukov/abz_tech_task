@@ -26,7 +26,6 @@ import radio from "./radio.module.scss";
 import main from "./index.module.scss";
 import uploaderStyles from "./uploader.module.scss";
 
-// const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 const Schema = yup.object().shape({
   name: yup
     .string()
@@ -91,13 +90,6 @@ const theme = createTheme({
           }
         }
       }
-
-      // '& .root': {
-      //   margin: 0,
-      //   padding: 0,
-      //   width: 24,
-      //   height: 24,
-      // },
     },
   },
 });
@@ -122,7 +114,6 @@ const Basic = () => {
     createNewUser(data);
   };
 
-  // const input = useRef(null)
   const [file, setFile] = useState();
 
   const handleChange = (event) => {
@@ -151,8 +142,6 @@ const Basic = () => {
               position_id: "",
               photo: new FormData(),
             }}
-            // validationSchema={Schema}
-
             validate={(values) => {
               const errors = {};
               if (!values.name) {
@@ -170,11 +159,6 @@ const Basic = () => {
               }
               if (!values.position_id || values.position_id === "")
                 errors.position_id = "Required";
-
-              // if (
-              //     !/\+\d{2}\d{3}\d{3}\d{4}/g.test(values.phone)
-              // )
-              //     errors.phone = 'Wrong phone number, should be +38 (XXX) XXX - XX - XX '
               return errors;
             }}
             onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -212,9 +196,6 @@ const Basic = () => {
                     sx={{ marginBottom: "49px",
                       width: {...fields_sizes},
                   }}
-                    // sx={{
-                    //   ...theme.components.MuiTextField
-                    // }}
                     label="Your name"
                     type="text"
                     name="name"
@@ -255,42 +236,6 @@ const Basic = () => {
                     error={errors.phone && touched.phone && errors.phone}
                   />
                 </div>
-                {/* <Input
-                  // sx={{
-                  //   ...theme.components.MuiTextField
-                  // }}
-                  label="Your name"
-                  type="text"
-                  name="name"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.name}
-                  helperText={errors.name && touched.name && errors.name}
-                  error={errors.name && touched.name && errors.name}
-                />
-
-                <Input
-                  label="Email"
-                  type="email"
-                  name="email"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.email}
-                  helperText={errors.email && touched.email && errors.email}
-                  error={errors.email && touched.email && errors.email}
-                />
-
-                <Input
-                  style={{ marginBottom: "43px" }}
-                  label="Phone"
-                  type="number"
-                  name="phone"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.phone}
-                  helperText={errors.phone && touched.phone ? errors.phone : ""}
-                  error={errors.phone && touched.phone && errors.phone}
-                /> */}
                 <FormControl classes={radio.radio__form}>
                   <FormLabel
                     sx={{
