@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-import UserCard from "../../custom/Card";
+import Loader from "../../custom/Loader";
 import Button from "../../custom/Button";
+import UserCard from "../../custom/Card";
 
 import styles from "./index.module.scss";
-import * as axios from "axios";
-import Loader from "../../custom/Loader";
 
 //for debug
 // const users = [
@@ -98,24 +97,3 @@ const Users = ({ fetchUsers,
 
 export default Users;
 
-{
-  /* <header className={styles.users__header}>
-        <h1 className={styles.header__title}>Working with GET request</h1>
-      </header>
-      <body className={styles.users__body}>
-        {!users || users.length === 0 ?
-            <Loader /> : users.map((user, index) => (
-          <UserCard key={index} 
-            photo={user.photo}
-            name={user.name}
-            position={user.position}
-            email={user.email}
-            phone={user.phone}
-          />
-        ))}
-      </body>
-      {isFetching ? <Loader /> : 
-      <div className={styles.users__button}>
-        <Button  fn={getMoreUsers} style={{width: '120px'}} text={"Show more"} />
-      </div>} */
-}

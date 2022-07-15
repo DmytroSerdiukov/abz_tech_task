@@ -16,10 +16,6 @@ $HEIGHT: 100%;
     margin: auto;
 }
 
-// .users__header {
-//     margin: 140px 0px 50px 0px;
-// }
-
 .header__title {
     margin-top: 140px;
     text-align: center;
@@ -58,7 +54,6 @@ $HEIGHT: 100%;
 
     .users__cards {
         width: 1168px;
-        // min-height:537px;
         max-height: 538px;
         overflow: hidden;
         overflow-y: auto;
@@ -79,7 +74,6 @@ $HEIGHT: 100%;
 
     .users__cards {
         width: 904px;
-        // min-height:537px;
         max-height: 538px;
         overflow: hidden;
         overflow-y: auto;
@@ -93,7 +87,6 @@ $HEIGHT: 100%;
     }
     .users__cards{
         width: 704px;
-        // min-height:794px;
         max-height: 794px;
         grid-template-columns: 344px 344px;
         grid-template-rows: 254px 254px 254px;
@@ -118,9 +111,6 @@ $HEIGHT: 100%;
     .users__cards{
         width: 425px;
         max-height: 1642px;
-        // overflow: hidden;
-        // overflow-y: scroll;
-        // overflow-x: visible;
         grid-template-columns: 328px;
         grid-template-rows: 254px;
         column-gap: 16px;
